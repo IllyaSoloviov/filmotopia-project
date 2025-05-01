@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Films</title>
+    <link rel="icon" href="img/logo/muviesLogo.png" type="image/png">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="img/logo/muviesLogo.png" alt="img">
+        <h1>FILMOTOPIA</h1>
+    </div>
+    <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="films.html">MOVIES</a></li>
+        <li><a href="series.html">SERIES</a></li>
+        <li><a href="lists.html">LISTS</a></li>
+    </ul>
+    <div class="profileContainer">
+        <button class="logInButton">
+            <img src="img/icon/VectorDoor.svg" alt="vector">
+            Log In
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="controls">
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="SEARCH FILMS"/>
+            <button id="searchButton"><img src="img/icon/Magnifier.png" alt="Magnifier"></button>
+        </div>
+
+        <div class="filters">
+            <select id="genreSelect">
+                <option value="">Select Genre</option>
+            </select>
+
+            <select id="sortSelect">
+                <option value="">Sort by</option>
+                <option value="popularity.desc">Popularity</option>
+                <option value="vote_average.desc">Rating</option>
+                <option value="release_date.desc">Release Date (Newest)</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="moviesGrid" id="moviesList">
+
+    </section>
+
+    <div class="load-more">
+        <button id="loadMoreBtn" class="loadMoreBtn">LOAD MORE</button>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-links">
+        <a href="#">Licence</a>
+        <a href="#">FAQ</a>
+        <a href="#">Company</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacts</a>
+        <a href="#">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">
+        © 2023 Filmotopia. All rights reserved.
+    </div>
+</footer>
+
+<script src="scripts/load-layout.js"></script>
+<script src="scripts/movies.js"></script>
+</body>
+</html>
