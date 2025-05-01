@@ -59,7 +59,7 @@ function displayMovies(movies) {
       <h3>${movie.title}</h3>
       <p>${releaseYear}</p>
       <p>${movie.vote_average.toFixed(1)} ⭐</p>
-      <button class="btnMovies" data-id="${movie.id}">Info</button>
+      <a href="movie.html?id=${movie.id}" class="btnMovies">More Info</a>
     `;
         moviesList.appendChild(card);
     });
