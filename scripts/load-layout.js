@@ -1,9 +1,4 @@
-// додає Footer і Header на сторінки
-document.addEventListener("DOMContentLoaded", () => {
 
-    activeLinkFunction();
-    setTimeout(modalAuthorization, 50);
-});
 // стилізує активну вкладку в header
 function activeLinkFunction() {
     const links = document.querySelectorAll('header ul li a');
@@ -59,3 +54,6 @@ function modalAuthorization(){
         })
     })
 }
+
+activeLinkFunction();
+setTimeout(modalAuthorization, 50);
