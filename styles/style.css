@@ -644,7 +644,7 @@ main .movieDetails {
   position: relative;
   display: grid;
   max-width: 100vw;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: 3fr 300px 2fr 2fr 3fr;
   grid-template-rows: repeat(5, 1fr);
   gap: 10px;
   padding: 20px;
@@ -663,7 +663,7 @@ main .movieDetails .backGroundMovie {
   z-index: -1;
 }
 main .movieDetails .posterMovie {
-  grid-column: 2/4;
+  grid-column: 2/3;
   grid-row: 1/3;
   display: flex;
   align-items: center;
@@ -677,7 +677,7 @@ main .movieDetails .posterMovie img {
   border-radius: 20px;
 }
 main .movieDetails .infoMovie {
-  grid-column: 4/7;
+  grid-column: 3/5;
   grid-row: 1/3;
   display: flex;
   flex-direction: column;
@@ -698,8 +698,23 @@ main .movieDetails .infoMovie p strong {
   letter-spacing: 1.5px;
   font-weight: 500;
 }
+main .movieDetails .infoMovie #addToFavorites {
+  font-family: "Bedas";
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #E6B33B;
+  color: #000000;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+main .movieDetails .infoMovie #addToFavorites.favorited {
+  background-color: #141414;
+  color: #9BE9AC;
+}
 main .movieDetails .trailerMovie {
-  grid-column: 2/7;
+  grid-column: 2/5;
   grid-row: 3/6;
   display: flex;
   flex-direction: column;
@@ -729,6 +744,54 @@ main h1 span:nth-child(1) {
 }
 main h1 span:nth-child(2) {
   color: #E6B33B;
+}
+main .favoritesContainer {
+  display: grid;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  gap: 10px;
+}
+main .favoritesContainer .movieLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-height: 120px;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #212121;
+  border-radius: 15px;
+}
+main .favoritesContainer .movieLine img {
+  max-height: 110px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+main .favoritesContainer .movieLine a {
+  text-decoration: none;
+}
+main .favoritesContainer .movieLine a h3 {
+  color: #E6B33B;
+  letter-spacing: 1px;
+  width: 150px;
+}
+main .favoritesContainer .movieLine .remove-btn {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-family: "Bedas";
+  border: none;
+  border-radius: 10px;
+  background-color: #E6B33B;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main .favoritesContainer .movieLine .remove-btn:hover {
+  background-color: #d39c1b;
 }
 
 footer {
